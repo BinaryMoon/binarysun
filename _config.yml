@@ -13,8 +13,13 @@ permalink: /blog/:year/:title/
 collections:
   games:
     output: true
-  values:
-    layout: game
+
+# Default properties
+defaults:
+  - scope:
+      type: games
+    values:
+      layout: game
 
 # Build settings
 markdown: kramdown
