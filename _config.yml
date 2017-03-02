@@ -1,7 +1,6 @@
 # Site settings
 # accessible in the templates via {{ site.myvariable }}.
 title: Binary Sun - Online Games
-email: your-email@domain.com
 description: >
   Binary Sun is an online games site focusing on games that work on every platform; from desktop computer, to tablet, and phone.
 baseurl: "" # the subpath of your site, e.g. /blog
