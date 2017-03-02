@@ -1,5 +1,6 @@
+{% assign gamelist = (site.games | sort: 'popularity') %}
 <section class="games-list wrapper">
-	{% for game in site.games %}
+	{% for game in gamelist %}
 	<div class="game">
 		<a href="{{ game.url | relative_url }}" class="game-url">
 			<img src="https://az680633.vo.msecnd.net/thumbnail/{{ game.game_id }}/250/{{ game.game_id }}.png" class="game-icon" />
