@@ -1,6 +1,9 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+# game to display on the homepage
+title: "Badland"
+game_width: 850
+game_height: 475
+game_id: 40274
+# page layout
 layout: home
 ---
