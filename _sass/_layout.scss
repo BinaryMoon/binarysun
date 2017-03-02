@@ -1,0 +1,172 @@
+body {
+
+	background: $canvas-grey-10;
+
+}
+
+.wrapper {
+
+	max-width: 45rem;
+	width: 100%;
+	margin: 0 auto;
+
+}
+
+a {
+
+	text-decoration: none;
+	color: $canvas-blue;
+
+	&:hover {
+
+		text-decoration: underline;
+
+	}
+
+}
+
+.masthead {
+
+	margin-bottom: $grid-line-height * 2;
+
+	&:before {
+
+		background: $canvas-yellow;
+		height: $grid-line-height * 2.5;
+		display: block;
+		content: '';
+		border-bottom: $border-width solid $canvas-white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+
+	}
+
+	.wrapper {
+
+		margin-top: $grid-line-height;
+		z-index: 2;
+		position: relative;
+		border: $border-width solid $canvas-white;
+		background: $canvas-blue;
+
+		@include clear;
+
+	}
+
+	.site-title {
+
+		@include modular-scale( delta );
+		color: $canvas-grey-100;
+		font-weight: bold;
+		background: $canvas-white;
+		float: left;
+		padding: 0 ( $grid-gutter / 2 );
+		line-height: $grid-line-height * 2.5;
+
+	}
+
+	nav {
+
+		float: left;
+
+		a {
+
+			@include post-meta-data;
+			color: $canvas-white;
+			padding: 0 ( $grid-gutter / 2 );
+			line-height: $grid-line-height * 2.5;
+			float: left;
+
+		}
+
+	}
+
+}
+
+.games-list {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: $grid-line-height * 2;
+
+	.game {
+
+		width: 20%;
+
+		.game-name {
+
+			font-weight: bold;
+			text-align: center;
+			display: block;
+
+		}
+
+		.game-icon {
+
+			border-radius: 15%;
+			display: block;
+			margin-bottom: $grid-line-height / 4;
+
+		}
+
+	}
+
+}
+
+.game-wrapper {
+
+	iframe {
+
+		margin: 0 auto ( $grid-line-height * $grid-line-height-multiplier )  auto;
+		display: block;
+
+	}
+
+}
+
+.game-header {
+
+	text-align: center;
+
+	h1 {
+
+		font-weight: bold;
+		margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
+
+	}
+
+
+}
+
+.site-footer {
+
+	padding: ( $grid-line-height * 2 ) 0;
+
+	.site-description {
+
+		padding: $grid-line-height ( $grid-gutter );
+		background: $canvas-white;
+		border-radius: $border-radius;
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	}
+
+	.copyright {
+
+		@include post-meta-data;
+		text-align: center;
+
+		.sep {
+
+			margin: 0 ( $grid-gutter / 4 );
+			opacity: 0.5;
+
+		}
+
+	}
+
+}
