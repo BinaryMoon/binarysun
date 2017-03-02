@@ -1,5 +1,5 @@
 ---
-title:  "Cut the Rope 2"
+title: "Cut the Rope 2"
 game_width: 363
 game_height: 550
 game_id: 40214

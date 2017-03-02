@@ -1,5 +1,5 @@
 ---
-title:  "Farm Blocks 10x10"
+title: "Farm Blocks 10x10"
 game_width: 600
 game_height: 800
 game_id: 40326

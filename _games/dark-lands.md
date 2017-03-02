@@ -1,5 +1,5 @@
 ---
-title:  "Dark Lands"
+title: "Dark Lands"
 game_width: 600
 game_height: 400
 game_id: 40272

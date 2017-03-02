@@ -1,5 +1,5 @@
 ---
-title:  "Cut the Rope"
+title: "Cut the Rope"
 game_width: 1024
 game_height: 576
 game_id: 40071

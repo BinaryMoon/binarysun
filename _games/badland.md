@@ -1,7 +1,7 @@
 ---
-title:  "Badland"
-game_width: 475
-game_height: 850
+title: "Badland"
+game_width: 850
+game_height: 475
 game_id: 40274
 categories: adventure
 ---
