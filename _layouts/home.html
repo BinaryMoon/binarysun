@@ -4,33 +4,8 @@ layout: default
 
 <div class="home">
 
-	<h1 class="page-heading">Posts</h1>
+	{{ content }}
 
-	  {{ content }}
-
-	<ul class="post-list">
-	{% for post in site.posts %}
-		<li>
-			<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-			<h2>
-				<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-			</h2>
-		</li>
-	{% endfor %}
-	</ul>
-
-	<h1 class="page-heading">Games</h1>
-
-	<ul class="post-list">
-	{% for game in site.games %}
-		<li>
-			<a href="{{ game.url | relative_url }}" class="game-url">
-				<img src="{{ game.game_icon }}" />
-				<span class="game-name">{{ game.title | escape }}</span>
-			</a>
-		</li>
-	{% endfor %}
-	</ul>
+	{% include all-games.html %}
 
 </div>
