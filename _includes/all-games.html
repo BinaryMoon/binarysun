@@ -1,0 +1,10 @@
+<section class="games-list wrapper">
+	{% for game in site.games %}
+	<div class="game">
+		<a href="{{ game.url | relative_url }}" class="game-url">
+			<img src="{{ game.game_icon }}" class="game-icon" />
+			<span class="game-name">{{ game.title | escape }}</span>
+		</a>
+	</div>
+	{% endfor %}
+</section>
