@@ -51,6 +51,8 @@ a {
 		position: relative;
 		border: $border-width solid $canvas-white;
 		background: $canvas-blue;
+		border-radius: $grid-line-height;
+		overflow: hidden;
 
 		@include clear;
 
@@ -91,6 +93,7 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-content: space-between;
 	margin-bottom: $grid-line-height * 2;
 
 	.game {
@@ -121,12 +124,36 @@ a {
 
 .game-wrapper {
 
-	iframe {
+	.game-container {
 
+		position: relative;
+		border: $border-width solid $canvas-white;
 		margin: 0 auto ( $grid-line-height * $grid-line-height-multiplier )  auto;
+		width: 100%;
 		display: block;
+		background: $canvas-white;
+
+		.game-container-inner {
+
+			position: relative;
+
+		}
+
+		iframe {
+
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+		}
 
 	}
+
 
 }
 
