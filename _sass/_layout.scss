@@ -25,6 +25,13 @@ a {
 
 }
 
+h1, h2, h3, h4, h5, h6 {
+
+	text-align: center;
+	font-weight: bold;
+
+}
+
 .masthead {
 
 	margin-bottom: $grid-line-height * 2;
@@ -167,7 +174,6 @@ a {
 		margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
 	}
-
 
 }
 
