@@ -1,21 +1,25 @@
 ---
 layout: default
 ---
-<article class="game">
+<article>
 
 	<header class="game-header">
 		<h1 class="game-title">{{ page.title | escape }}</h1>
 	</header>
 
-	<iframe
-		style="height: {{ page.game_height }}px; width: {{ page.game_width }}px;"
-		src="https://games.gamepix.com/play/{{ page.game_id }}?sid=80185"
-		width="{{ page.game_width }}"
-		height="{{ page.game_height }}"
-		frameborder="0"
-		scrolling="no"></iframe>
+	<div class="game-wrapper">
 
-	<div class="game-description">
+		<iframe
+			style="height: {{ page.game_height }}px; width: {{ page.game_width }}px;"
+			src="https://games.gamepix.com/play/{{ page.game_id }}?sid=80185"
+			width="{{ page.game_width }}"
+			height="{{ page.game_height }}"
+			frameborder="0"
+			scrolling="no"></iframe>
+
+	</div>
+
+	<div class="game-description wrapper">
 		{{ content }}
 	</div>
 
