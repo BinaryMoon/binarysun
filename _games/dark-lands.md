@@ -2,7 +2,6 @@
 title:  "Dark Lands"
 game_width: 600
 game_height: 400
-game_icon: https://az680633.vo.msecnd.net/thumbnail/40272/250/40272.png
 game_id: 40272
 categories: adventure
 ---

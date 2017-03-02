@@ -2,7 +2,6 @@
 title:  "Cut the Rope 2"
 game_width: 363
 game_height: 550
-game_icon: https://az680633.vo.msecnd.net/thumbnail/40214/250/40214.png
 game_id: 40214
 categories: adventure puzzles girls
 ---

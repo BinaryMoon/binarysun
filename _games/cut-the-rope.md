@@ -2,7 +2,6 @@
 title:  "Cut the Rope"
 game_width: 1024
 game_height: 576
-game_icon: https://az680633.vo.msecnd.net/thumbnail/40071/250/40071.png
 game_id: 40071
 categories: puzzles classics
 ---

@@ -2,7 +2,6 @@
 title:  "Farm Blocks 10x10"
 game_width: 600
 game_height: 800
-game_icon: https://az680633.vo.msecnd.net/thumbnail/40326/250/40326.png
 game_id: 40326
 categories: puzzles action
 ---
