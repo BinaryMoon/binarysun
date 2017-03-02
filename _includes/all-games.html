@@ -2,7 +2,7 @@
 	{% for game in site.games %}
 	<div class="game">
 		<a href="{{ game.url | relative_url }}" class="game-url">
-			<img src="{{ game.game_icon }}" class="game-icon" />
+			<img src="https://az680633.vo.msecnd.net/thumbnail/{{ game.game_id }}/250/{{ game.game_id }}.png" class="game-icon" />
 			<span class="game-name">{{ game.title | escape }}</span>
 		</a>
 	</div>
