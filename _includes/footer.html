@@ -2,11 +2,20 @@
 
 	<div class="wrapper">
 
-		<h2 class="footer-heading">{{ site.title | escape }}</h2>
+		<h2>{{ site.title | escape }}</h2>
 
-		<div class="footer-col">
+		<div class="site-description">
 			<p>{{ site.description | escape }}</p>
 		</div>
+
+		<nav>
+			<a href="{% link _pages/games.md %}">Games</a>
+			<a href="{% link _pages/about.md %}">About</a>
+		</nav>
+
+		<p class="copyright">
+			&copy;Binary Sun 2004 - {{ site.time | date: '%Y' }} <span class="sep">|</span> <a href="https://www.binarymoon.co.uk/">A Binary Moon playground</a>
+		</p>
 
 	</div>
 
