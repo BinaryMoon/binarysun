@@ -1,0 +1,8 @@
+---
+title: "Finders Critters"
+game_id: 40191
+game_width: 380
+game_height: 550
+rank: 6700
+---
+Match two or more blocks of the same color to help critters reach the ground! Plan your moves carefully to avoid getting stuck. Use bombs and firecrackers to pop even more blocks and make critters happy. Play on to unlock extra characters like the extraterrestrial and baby shark!

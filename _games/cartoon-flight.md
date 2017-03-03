@@ -1,0 +1,8 @@
+---
+title: "Cartoon Flight"
+game_id: 29
+game_width: 320
+game_height: 480
+rank: 5900
+---
+Get ready for a breathtaking flight with the fearless Miss Pilot! Fly, collect coins, and receive rewards! The Cartoon Flight is starting now.
