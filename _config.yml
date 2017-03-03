@@ -2,9 +2,9 @@
 # accessible in the templates via {{ site.myvariable }}.
 title: Binary Sun - Online Games
 description: >
-  Binary Sun is an online games site focusing on games that work on every platform; from desktop computer, to tablet, and phone.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  Binary Sun is an online games site focusing on games that work on every platform. We publish HTML5 browser based games for desktop computer, tablet, and phone.
+baseurl: ""
+url: ""
 twitter_username: binarymoon
 permalink: /blog/:year/:title/
 
