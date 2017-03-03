@@ -4,6 +4,7 @@ game_id: 40085
 game_width: 800
 game_height: 500
 rank: 1900
+date: 2015-09-29T16:39:26.317Z
 ---
 Game based on the classic fairy tale that every boy and girl knows - the story of Cinderella!
 Little girl needs to clean the dishes before she would be able to go to the ball and meet the Prince Charming there.
