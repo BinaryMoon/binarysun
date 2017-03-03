@@ -42,3 +42,7 @@ $button-alt-colour: $canvas-grey-5 !default;
 
 // separator - used to separate links or post meta info
 $separator: '/' !default;
+
+// WordPress breakpoints (numbers decrease from large to small)
+$wp-responsive-width-2: 782px;
+$wp-responsive-width-1: 600px;

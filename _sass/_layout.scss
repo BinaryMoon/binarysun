@@ -58,7 +58,6 @@ h1, h2, h3, h4, h5, h6 {
 		position: relative;
 		border: $border-width solid $canvas-white;
 		background: $canvas-blue;
-		border-radius: $grid-line-height;
 		overflow: hidden;
 
 		@include clear;
@@ -74,6 +73,12 @@ h1, h2, h3, h4, h5, h6 {
 		float: left;
 		padding: 0 ( $grid-gutter / 2 );
 		line-height: $grid-line-height * 2.5;
+
+		@include for-phone() {
+
+			width: 100%;
+
+		}
 
 	}
 
