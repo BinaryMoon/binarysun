@@ -1,4 +1,4 @@
-{% assign gamelist = (site.games | sort: 'popularity') %}
+{% assign gamelist = (site.games | sort: 'rank' | reverse) %}
 <section class="games-list wrapper">
 	{% for game in gamelist %}
 	<div class="game">
