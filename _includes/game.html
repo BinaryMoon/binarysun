@@ -1,15 +1,11 @@
 <style>
 .game-container {
-	max-width: {{ page.game_width | round }}px;
+	max-width: {{ include.game.game_width | round }}px;
 }
 .game-container-inner {
-	padding-bottom: {{ page.game_height | times: 100 | divided_by: page.game_width }}%;
+	padding-bottom: {{ include.game.game_height | times: 100 | divided_by: include.game.game_width }}%;
 }
 </style>
-
-<header class="game-header">
-	<h1 class="game-title">{{ page.title | escape }}</h1>
-</header>
 
 <div class="game-wrapper">
 
@@ -19,10 +15,20 @@
 
 		<div class="game-container-inner">
 			<iframe
-				src="https://games.gamepix.com/play/{{ page.game_id }}?sid=80185"
+				src="https://games.gamepix.com/play/{{ include.game.game_id }}?sid=80185"
 				frameborder="0"
 				scrolling="no"></iframe>
 		</div>
 	</div>
+
+</div>
+
+<div class="game-description wrapper">
+
+	<header class="game-header">
+		<h1 class="game-title">{{ include.game.title | escape }}</h1>
+	</header>
+
+	{{ content }}
 
 </div>

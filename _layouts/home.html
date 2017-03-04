@@ -4,7 +4,11 @@ layout: default
 
 <div class="home">
 
-	{% include game.html %}
+	{% for game in site.games %}
+		{% if page.game == game.title %}
+			{% include game.html game=game %}
+		{% endif %}
+	{% endfor %}
 
 	{{ content }}
 
