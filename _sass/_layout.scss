@@ -8,7 +8,8 @@ body {
 
 	max-width: 45rem;
 	width: 100%;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 
 }
 
@@ -27,7 +28,6 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
 
-	text-align: center;
 	font-weight: bold;
 
 }
@@ -156,11 +156,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .game-header {
 
-	text-align: center;
-
 	h1 {
 
-		font-weight: bold;
 		margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
 	}
@@ -169,14 +166,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer {
 
-	padding: ( $grid-line-height * 2 ) 0;
+	padding: ( $grid-line-height * 3 ) 0;
+	margin-top: $grid-line-height * 3;
+	background: $canvas-white;
 
 	.site-description {
 
-		padding: $grid-line-height ( $grid-gutter );
-		background: $canvas-white;
-		border-radius: $border-radius;
-		margin-bottom: $grid-line-height;
+		margin-bottom: $grid-line-height * 3;
 
 		h2 {
 
