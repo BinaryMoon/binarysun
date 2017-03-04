@@ -35,34 +35,11 @@ h1, h2, h3, h4, h5, h6 {
 .masthead {
 
 	margin-bottom: $grid-line-height * 2;
-
-	&:before {
-
-		background: $canvas-yellow;
-		height: $grid-line-height * 2.5;
-		display: block;
-		content: '';
-		border-bottom: $border-width solid $canvas-white;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 1;
-
-	}
-
-	.wrapper {
-
-		margin-top: $grid-line-height;
-		z-index: 2;
-		position: relative;
-		border: $border-width solid $canvas-white;
-		background: $canvas-blue;
-		overflow: hidden;
-
-		@include clear;
-
-	}
+	position: relative;
+	border: $border-width solid $canvas-white;
+	background: $canvas-yellow;
+	overflow: hidden;
+	@include clear;
 
 	.site-title {
 
@@ -73,6 +50,13 @@ h1, h2, h3, h4, h5, h6 {
 		float: left;
 		padding: 0 ( $grid-gutter / 2 );
 		line-height: $grid-line-height * 2.5;
+		border-right: $border-width solid $canvas-white;
+
+		&:hover {
+
+			background: $canvas-yellow;
+
+		}
 
 		@include for-phone() {
 
@@ -84,15 +68,16 @@ h1, h2, h3, h4, h5, h6 {
 
 	nav {
 
-		float: left;
+		float: right;
 
 		a {
 
 			@include post-meta-data;
-			color: $canvas-white;
-			padding: 0 ( $grid-gutter / 2 );
+			color: $canvas-grey-100;
+			padding: 0 ( $grid-gutter );
 			line-height: $grid-line-height * 2.5;
-			float: left;
+			font-weight: bold;
+			display: inline-block;
 
 		}
 
