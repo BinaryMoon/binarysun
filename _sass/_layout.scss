@@ -318,19 +318,36 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.fullscreen-game {
+body.fullscreen-game {
 
-	.game-container {
+	overflow: hidden;
 
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		z-index: 100;
-		max-width: 100%;
-		padding-bottom: 0;
-		height: 100%;
+	.game-wrapper {
+
+		.game-container {
+
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 100;
+			max-width: 100%;
+			padding-bottom: 0;
+			height: 100%;
+
+			.game-container-inner {
+
+				padding-bottom: 0;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: 36px;
+
+			}
+
+		}
 
 	}
 
