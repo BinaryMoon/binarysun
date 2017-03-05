@@ -5,6 +5,7 @@ game_width: 800
 game_height: 500
 rank: 3500
 date: 2015-09-29T16:41:09.065Z
+categories: arcade
 ---
 Welcome to the Crazy Pizza! 
 Run your own Italias pizzeria!

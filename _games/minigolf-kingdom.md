@@ -5,6 +5,7 @@ game_width: 800
 game_height: 500
 rank: 5200
 date: 2015-09-21T16:01:34.226Z
+categories: classics sports
 ---
 Do you know what garden gnomes do when nobody?s watching?
 They are playing Minigolf Kingdom!

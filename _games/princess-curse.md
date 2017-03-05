@@ -5,5 +5,6 @@ game_width: 439
 game_height: 700
 rank: 13000
 date: 2015-09-21T15:09:52.818Z
+categories: girls
 ---
 The princess was walking around in the forest. Then she found a lone house, she was looking around there till accidentally she  toppled the witch cauldron. The witch saw what the princess did and she was really angry and then cursed the princess. Dispel the curse and help the princess looks beautiful in front of the prince charming. Try Princess Curse.

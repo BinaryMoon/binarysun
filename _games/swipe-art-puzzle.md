@@ -5,5 +5,6 @@ game_width: 800
 game_height: 500
 rank: 9100
 date: 2015-07-07T14:18:07.617Z
+categories: puzzles
 ---
 If you like art here's a puzzle game for you. Move the pieces to recreate some super famous paintings made by old masters (those are a bit enhanced with a strange humour). Train your brain and enjoy some beauty and humor at the same time! That?s win-win-win, right? Enjoy Swipe Art Puzzle!
