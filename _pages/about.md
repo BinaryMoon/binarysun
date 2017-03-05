@@ -3,7 +3,7 @@ layout: page
 title: About Binary Sun
 permalink: /about/
 ---
-Binary Sun is an online games arcade. All games are made in HTML5, which means they can be played on any device.
+**Binary Sun** is an online games arcade. All games are made in HTML5, which means they can be played on any device.
 
 ## History
 
