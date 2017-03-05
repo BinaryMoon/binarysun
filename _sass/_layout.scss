@@ -200,6 +200,11 @@ h1, h2, h3, h4, h5, h6 {
 
 		margin: 0 0 ( $grid-line-height ) 0;
 
+		@include for-phone {
+
+			@include modular-scale( delta );
+		}
+
 	}
 
 	.filter {
@@ -209,6 +214,7 @@ h1, h2, h3, h4, h5, h6 {
 		a {
 
 			margin-right: 0.1em;
+			margin-bottom: 0.25em;
 
 			&.selected {
 
