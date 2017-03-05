@@ -17,7 +17,7 @@
 		);
 
 		// Display favorites.
-		if ( $( 'body' ).hasClass( 'favourite-games' ) ) {
+		if ( $( 'body' ).hasClass( 'my-favourite-games' ) ) {
 
 			display_favorites();
 
@@ -65,7 +65,7 @@
 
 		for ( var i = 0; i < faves.length; i++ ) {
 
-			var selector = '.favourite-games .games-list .game[data-game-id="' + faves[i] + '"]';
+			var selector = '.my-favourite-games .games-list .game[data-game-id="' + faves[i] + '"]';
 			$( selector ).show();
 
 		}
