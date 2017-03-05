@@ -92,7 +92,7 @@
 
 	var init_game_categories_filters = function() {
 
-		$( '.game-header .filter a' ).on(
+		$( '.category-header .filter a' ).on(
 			'click',
 			function( e ) {
 
