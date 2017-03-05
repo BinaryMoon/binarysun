@@ -1,6 +1,10 @@
+{% assign width=include.game.game_width | round %}
+{% if width < 500 %}
+{% assign width=500 %}
+{% endif %}
 <style>
 .game-container {
-	max-width: {{ include.game.game_width | round }}px;
+	max-width: {{ width }}px;
 }
 .game-container-inner {
 	padding-bottom: {{ include.game.game_height | times: 100 | divided_by: include.game.game_width }}%;
@@ -12,6 +16,7 @@
 	<div class="game-container">
 		<div class="toolbar">
 			<button class="fave" data-game-id="{{ include.game.game_id }}">Favourite</button>
+			<button class="fullscreen">Fullscreen</button>
 		</div>
 
 		<div class="game-container-inner">
