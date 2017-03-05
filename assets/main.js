@@ -141,7 +141,7 @@
 				$( 'body' ).toggleClass( 'fullscreen-game' );
 
 				// Reload iframe.
-				$( '.game-container iframe' ).attr( 'src', $( '.game-container iframe' ).attr( 'src' ) );
+				//$( '.game-container iframe' ).attr( 'src', $( '.game-container iframe' ).attr( 'src' ) );
 
 			}
 		);
