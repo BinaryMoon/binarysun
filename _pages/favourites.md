@@ -1,5 +1,5 @@
 ---
 layout: all-games
-title: Favourite Games
+title: My Favourite Games
 permalink: /favourites/
 ---
