@@ -18,10 +18,12 @@ a {
 
 	text-decoration: none;
 	color: $canvas-blue;
+	@include transition;
 
 	&:hover {
 
 		text-decoration: underline;
+		@include transition;
 
 	}
 
@@ -55,7 +57,9 @@ h1, h2, h3, h4, h5, h6 {
 
 		&:hover {
 
-			background: $canvas-yellow;
+			background: $canvas-blue;
+			color: $canvas-white;
+			text-decoration: none;
 
 		}
 
@@ -63,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 			width: 100%;
 			text-align: center;
+			border: none;
 
 		}
 
@@ -148,6 +153,20 @@ h1, h2, h3, h4, h5, h6 {
 
 		}
 
+		.toolbar {
+
+			text-align: center;
+			border-bottom: $border-width solid $canvas-white;
+
+		}
+
+		button {
+
+			background: transparent;
+			color: $canvas-grey-100;
+
+		}
+
 		iframe {
 
 			display: block;
@@ -163,15 +182,13 @@ h1, h2, h3, h4, h5, h6 {
 
 	}
 
-
 }
 
 .game-header {
 
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-
 	h1 {
 
+		@include modular-scale( epsilon );
 		margin: 0 0 ( $grid-line-height ) 0;
 
 	}
