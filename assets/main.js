@@ -1,13 +1,94 @@
 // javascript in here
 ;(function( $ ) {
 
-	$( 'document' ).ready(
-		function() {
+	var init_favorites = function() {
 
-			init_game_categories_filters();
+		// Favorite game.
+		$( 'button.fave' ).on(
+			'click',
+			function() {
+
+				var $this = $( this );
+				var game_id = $this.data( 'game-id' );
+
+				save_favorite( game_id );
+
+			}
+		);
+
+		// Display favorites.
+		if ( $( 'body' ).hasClass( 'favourite-games' ) ) {
+
+			display_favorites();
 
 		}
-	);
+
+	}
+
+	var get_favorites = function() {
+
+		return JSON.parse( localStorage.getItem( 'favoriteGames' ) );
+
+	}
+
+	/**
+	 * Save a favorite game to local storage.
+	 * Uses the game id
+	 *
+	 * @param  int id The ID of the game to save.
+	 */
+	var save_favorite = function( id ) {
+
+		var faves = get_favorites();
+
+		if ( ! faves ) {
+			faves = [];
+		}
+		faves.push( id );
+		faves = unique_array( faves );
+
+		localStorage.setItem( 'favoriteGames', JSON.stringify( faves ) );
+
+	}
+
+	/**
+	 * Display favourite games.
+	 * Will do nothing if executed on the wrong page.
+	 */
+	var display_favorites = function() {
+
+		var faves = get_favorites();
+
+		if ( ! faves ) {
+			return;
+		}
+
+		for ( var i = 0; i < faves.length; i++ ) {
+
+			var selector = '.favourite-games .games-list .game[data-game-id="' + faves[i] + '"]';
+			$( selector ).show();
+
+		}
+
+	}
+
+	/**
+	 * Make the contents of an array unique.
+	 *
+	 * @param array a An array that may have duplicates.
+	 * @return array
+	 */
+	var unique_array = function( a ) {
+
+		var seen = {};
+
+		return a.filter(
+			function( item ) {
+				return seen.hasOwnProperty( item ) ? false : ( seen[item] = true );
+			}
+		);
+
+	}
 
 	var init_game_categories_filters = function() {
 
@@ -45,5 +126,18 @@
 		);
 
 	}
+
+	// Initialiaze everything.
+	$( 'document' ).ready(
+		function() {
+
+			init_game_categories_filters();
+			init_favorites();
+
+			console.log( get_favorites() );
+
+		}
+	);
+
 
 })( jQuery );
