@@ -10,7 +10,10 @@ layout: default
 		{% endif %}
 	{% endfor %}
 
-	<h2 class="wrapper">Popular Games</h2>
+	<div class="wrapper">
+		<a class="button more-games" href="{% link _pages/games.md %}">View All Games</a>
+		<h2>Popular Games</h2>
+	</div>
 
 	{% include games-list.html limit=12 %}
 
