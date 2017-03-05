@@ -1,11 +1,17 @@
 ---
 layout: default
 ---
-<article>
 
-	{% include game.html game=page %}
+{% include game.html game=page %}
 
-</article>
+<div class="game-description wrapper">
+
+	<h1 class="game-title">{{ page.title | escape }}</h1>
+
+	{{ content }}
+
+</div>
+
 
 {% if jekyll.environment == 'production' %}
 <div class="wrapper">
