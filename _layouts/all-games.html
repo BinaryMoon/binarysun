@@ -5,6 +5,10 @@ layout: default
 
 	<header class="game-header wrapper">
 		<h1 class="game-title">{{ page.title | escape }}</h1>
+
+		<nav class="filter">
+			{% include game-categories.html %}
+		</nav>
 	</header>
 
 	{% include games-list.html limit=99999 %}

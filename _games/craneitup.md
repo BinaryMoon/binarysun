@@ -5,7 +5,7 @@ game_width: 320
 game_height: 480
 rank: 9200
 date: 2014-06-13T12:47:28.023Z
-categories: arcade girls
+genres: arcade girls
 ---
 Because Zombie is most popular nowdays, Tifa father always bought her Zombie dolls..
 but Tifa want to have another doll, she really like a bear dolls..

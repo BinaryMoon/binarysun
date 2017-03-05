@@ -1,7 +1,7 @@
 {% assign gamelist = (site.games | sort: 'rank' | reverse) %}
 <section class="games-list wrapper">
 	{% for game in gamelist limit: include.limit %}
-	<div class="game">
+	<div class="game" data-categories="{{ game.genres }}">
 		<a href="{{ game.url | relative_url }}" class="game-url">
 			<img src="https://az680633.vo.msecnd.net/thumbnail/{{ game.game_id }}/250/{{ game.game_id }}.png" class="game-icon" />
 			<span class="game-name">{{ game.title | escape }}</span>

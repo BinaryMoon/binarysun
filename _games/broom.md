@@ -5,7 +5,7 @@ game_width: 350
 game_height: 622
 rank: 3200
 date: 2015-03-11T15:26:55.886Z
-categories: arcade sports
+genres: arcade sports
 ---
 Broom is an addictive pixel racing on a wilde endless highway.
 Beat your Best Score using your super fast reflexes.

@@ -5,6 +5,6 @@ game_width: 320
 game_height: 480
 rank: 2300
 date: 2014-05-28T16:05:51.355Z
-categories: arcade
+genres: arcade
 ---
 Help the mouse eating chese on the Cheese Lab!

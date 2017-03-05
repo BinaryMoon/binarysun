@@ -5,6 +5,6 @@ game_width: 320
 game_height: 480
 rank: 16700
 date: 2016-05-20T16:21:30.491Z
-categories: puzzles
+genres: puzzles
 ---
 You are a wizard involved in fast-paced magic duels. Observe the specific magic your oponent is using and fight back with the right spell! Quick eyeballs and fingers required!

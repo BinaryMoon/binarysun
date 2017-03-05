@@ -156,9 +156,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .game-header {
 
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
 	h1 {
 
-		margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
+		margin: 0 0 ( $grid-line-height ) 0;
+
+	}
+
+	.filter {
+
+		@include post-meta-data;
+
+		a {
+
+			margin-right: $grid-gutter / 2;
+
+		}
 
 	}
 
