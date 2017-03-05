@@ -184,11 +184,12 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.game-header {
+.category-header {
+
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 
 	h1 {
 
-		@include modular-scale( epsilon );
 		margin: 0 0 ( $grid-line-height ) 0;
 
 	}
@@ -209,6 +210,16 @@ h1, h2, h3, h4, h5, h6 {
 			}
 
 		}
+
+	}
+
+}
+
+.game-description {
+
+	h1 {
+
+		@include modular-scale( epsilon );
 
 	}
 
@@ -288,6 +299,24 @@ h1, h2, h3, h4, h5, h6 {
 			display: none;
 
 		}
+
+	}
+
+}
+
+.fullscreen-game {
+
+	.game-container {
+
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 100;
+		max-width: 100%;
+		padding-bottom: 0;
+		height: 100%;
 
 	}
 
