@@ -127,12 +127,34 @@
 
 	}
 
+	/**
+	 * Switch the game between standard embedded size, and full csreen mode.
+	 */
+	var init_fullscreen_toggle = function() {
+
+		$( 'button.fullscreen' ).on(
+			'click',
+			function( e ) {
+
+				e.preventDefault();
+
+				$( 'body' ).toggleClass( 'fullscreen-game' );
+
+				// Reload iframe.
+				$( '.game-container iframe' ).attr( 'src', $( '.game-container iframe' ).attr( 'src' ) );
+
+			}
+		);
+
+	}
+
 	// Initialiaze everything.
 	$( 'document' ).ready(
 		function() {
 
 			init_game_categories_filters();
 			init_favorites();
+			init_fullscreen_toggle();
 
 			console.log( get_favorites() );
 
