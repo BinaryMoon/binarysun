@@ -106,14 +106,16 @@ h1, h2, h3, h4, h5, h6 {
 
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	//justify-content: space-between;
 	align-content: space-between;
 	margin-bottom: $grid-line-height * 2;
+	padding: 0;;
 
 	.game {
 
-		width: 15%;
+		width: 16%;
 		margin-bottom: $grid-line-height;
+		margin: 0 2% $grid-line-height 2%;
 
 		.game-name {
 
@@ -129,6 +131,12 @@ h1, h2, h3, h4, h5, h6 {
 			border-radius: 15%;
 			display: block;
 			margin-bottom: $grid-line-height / 4;
+
+		}
+
+		@include for-phone {
+
+			width: 29%;
 
 		}
 
