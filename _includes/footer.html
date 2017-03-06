@@ -1,5 +1,14 @@
 <footer class="site-footer">
 
+	{% if page.url != "/games/" %}
+	<div class="wrapper">
+		<a class="button more-games" href="{% link _pages/games.md %}">View All Games</a>
+		<h2>Popular Games</h2>
+	</div>
+
+	{% include games-list.html limit=10 %}
+	{% endif %}
+
 	<div class="wrapper">
 
 		<div class="site-description">
