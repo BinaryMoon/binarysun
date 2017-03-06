@@ -41,6 +41,10 @@
 
 			display_favorites();
 
+			if ( faves.length <= 0 ) {
+				$( '.message.no-favorites' ).show();
+			}
+
 		}
 
 	}

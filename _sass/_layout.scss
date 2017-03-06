@@ -426,6 +426,24 @@ body.fullscreen-game {
 
 }
 
+.message {
+
+	border: $border-width solid $canvas-blue;
+	background: rgba( $canvas-blue, 0.6 ) center ( $grid-line-height * 2 ) no-repeat;
+	padding: ( $grid-line-height * 2 ) ( $grid-gutter * 2 );
+	color: $canvas-blue-dark;
+	font-weight: bold;
+
+	&.no-favorites {
+
+		padding-top: $grid-line-height * 8;
+		background-image: url( ../images/heart-sad.png );
+		display: none;
+
+	}
+
+}
+
 .adsbygoogle {
 
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
