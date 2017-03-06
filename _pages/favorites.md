@@ -6,5 +6,5 @@ permalink: /favourites/
 <div class="wrapper message no-favorites">
 Looks like you don't have any favourite games.
 
-Play some games, and favourite the ones you like best. They will then show up on this page so you can access them easily.
+Play <a href="{% link _pages/games.md %}">some games</a>, and favourite the ones you like best. They will show here so you can access them easily.
 </div>
