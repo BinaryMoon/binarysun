@@ -65,7 +65,7 @@
 
 		for ( var i = 0; i < faves.length; i++ ) {
 
-			var selector = '.my-favourite-games .games-list .game[data-game-id="' + faves[i] + '"]';
+			var selector = '.my-favourite-games .all-games .games-list .game[data-game-id="' + faves[i] + '"]';
 			$( selector ).show();
 
 		}
