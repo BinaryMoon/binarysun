@@ -11,10 +11,28 @@
 				var $this = $( this );
 				var game_id = $this.data( 'game-id' );
 
-				save_favorite( game_id );
+				if ( $this.hasClass( 'favorited' ) ) {
+
+					$this.removeClass( 'favorited' );
+					delete_favorite( game_id );
+
+				} else {
+
+					$this.addClass( 'favorited' );
+					save_favorite( game_id );
+
+				}
 
 			}
 		);
+
+		// Setup favorited buttons.
+		var faves = get_favorites();
+
+		for ( var i = 0; i < faves.length; i++ ) {
+			var selector = 'button[data-game-id="' + faves[i] + '"]';
+			$( selector ).addClass( 'favorited' );
+		}
 
 		// Display favorites.
 		if ( $( 'body' ).hasClass( 'my-favourite-games' ) ) {
@@ -45,9 +63,42 @@
 			faves = [];
 		}
 		faves.push( id );
+
+		save_favorites( faves );
+
+	}
+
+	/**
+	 * Save favorite games as an array.
+	 *
+	 * @param  array faves array of favorite game ids.
+	 */
+	function save_favorites( faves ) {
+
 		faves = unique_array( faves );
 
 		localStorage.setItem( 'favoriteGames', JSON.stringify( faves ) );
+
+	}
+
+
+	/**
+	 * Delete favorite game with the specified id.
+	 *
+	 * @param  int id game id to delete.
+	 */
+	var delete_favorite = function( id ) {
+
+		var faves = get_favorites();
+		var new_faves = [];
+
+		for ( var i = 0; i < faves.length; i++ ) {
+			if ( faves[i] != id ) {
+				new_faves.push( faves[i] );
+			}
+		}
+
+		save_favorites( new_faves );
 
 	}
 
@@ -155,8 +206,6 @@
 			init_game_categories_filters();
 			init_favorites();
 			init_fullscreen_toggle();
-
-			console.log( get_favorites() );
 
 		}
 	);

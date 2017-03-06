@@ -102,6 +102,60 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+.icon {
+
+	&:before {
+
+		content: '';
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		background: url( ../images/icons.png ) no-repeat top center;
+		background-size: 24px;
+		vertical-align: middle;
+		margin: -0.25em 0.5em 0 0;
+
+	}
+
+	&.games {
+		&:before {
+			background-position-y: 24px * -6;
+		}
+	}
+
+	&.fullscreen {
+		&:before {
+			background-position-y: 24px * -4;
+
+			body.fullscreen-game & {
+				background-position-y: 24px * -5;
+			}
+		}
+	}
+
+	&.fave {
+		&:before {
+			background-position-y: 24px * 0;
+		}
+		&.favorited {
+			&:before {
+				background-position-y: 24px * -3;
+			}
+			&:hover {
+				&:before {
+					background-position-y: 24px * -2;					
+				}
+			}
+		}
+		&:hover {
+			&:before {
+				background-position-y: 24px * -1;
+			}
+		}
+	}
+
+}
+
 .games-list {
 
 	display: flex;
