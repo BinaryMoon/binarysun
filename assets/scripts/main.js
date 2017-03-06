@@ -34,6 +34,8 @@
 			$( selector ).addClass( 'favorited' );
 		}
 
+		display_favorites_count()
+
 		// Display favorites.
 		if ( $( 'body' ).hasClass( 'my-favourite-games' ) ) {
 
@@ -43,11 +45,39 @@
 
 	}
 
+
+	/**
+	 * Display a number in the navigation showing how many games you have favourited.
+	 */
+	var display_favorites_count = function() {
+
+		var faves = get_favorites();
+
+		console.log( faves.length );
+
+		if ( faves.length > 0 ) {
+
+			$( 'nav .favorites .count' ).html( faves.length ).show();
+
+		} else {
+
+			$( 'nav .favorites .count' ).hide();
+
+		}
+
+	}
+
+	/**
+	 * Get a list of favorite game ids.
+	 *
+	 * @return array
+	 */
 	var get_favorites = function() {
 
 		return JSON.parse( localStorage.getItem( 'favoriteGames' ) );
 
 	}
+
 
 	/**
 	 * Save a favorite game to local storage.
@@ -68,6 +98,7 @@
 
 	}
 
+
 	/**
 	 * Save favorite games as an array.
 	 *
@@ -78,6 +109,9 @@
 		faves = unique_array( faves );
 
 		localStorage.setItem( 'favoriteGames', JSON.stringify( faves ) );
+
+		// Update navigation favorites count.
+		display_favorites_count();
 
 	}
 
@@ -102,6 +136,7 @@
 
 	}
 
+
 	/**
 	 * Display favourite games.
 	 * Will do nothing if executed on the wrong page.
@@ -123,6 +158,7 @@
 
 	}
 
+
 	/**
 	 * Make the contents of an array unique.
 	 *
@@ -141,6 +177,11 @@
 
 	}
 
+
+	/**
+	 * Initialise game listing category filters.
+	 * Allows users to filter games according to their desired categories.
+	 */
 	var init_game_categories_filters = function() {
 
 		$( '.category-header .filter a' ).on(
@@ -178,6 +219,7 @@
 
 	}
 
+
 	/**
 	 * Switch the game between standard embedded size, and full csreen mode.
 	 */
@@ -199,7 +241,10 @@
 
 	}
 
-	// Initialiaze everything.
+
+	/**
+	 * Initialiaze everything.
+	 */
 	$( 'document' ).ready(
 		function() {
 
@@ -209,6 +254,5 @@
 
 		}
 	);
-
 
 })( jQuery );
