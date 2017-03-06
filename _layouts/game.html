@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include adense.html %}
+
 {% include game.html game=page %}
 
 <div class="game-description wrapper">
@@ -12,20 +14,4 @@ layout: default
 
 </div>
 
-
-{% if jekyll.environment == 'production' %}
-<div class="wrapper">
-
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- Binary Sun Footer Ad -->
-	<ins class="adsbygoogle"
-		 style="display:block"
-		 data-ad-client="ca-pub-2011372400165959"
-		 data-ad-slot="4722031198"
-		 data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-
-</div>
-{% endif %}
+{% include adense.html %}
