@@ -1,5 +1,5 @@
 /**
- * Javascript code for htps://www.binarysun.co.uk/
+ * Javascript code for https://www.binarysun.co.uk/
  */
 
 ;(function( $ ) {
