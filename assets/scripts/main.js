@@ -57,8 +57,6 @@
 
 		var faves = get_favorites();
 
-		console.log( faves.length );
-
 		if ( faves.length > 0 ) {
 
 			$( 'nav .favorites .count' ).html( faves.length ).show();
