@@ -10,6 +10,12 @@ Take control of your Rocket Board guiding it around 16 varied tracks, across 4 g
 
 The free version gives you the entire first grandprix so that you can build your Rocket Boarding skills preparing for the full game.
 
+- Choose 1 of 8 varied racers. Will you be the Racing Driver or the Cowboy, or maybe the Eskimo Girl?
+- Colourful cartoony 3d graphics bring to life a world you will want to return to again and again.
+- Race across 16 different tracks in 4 varied locations
+- Listen to a varied musical score, even including the ability to add your own music into the game.
+- Install and play in minutes, the basic version is only 2.5 megabytes and the full version is a measly 3.4 meg.
+
 <div class="gallery" markdown="1">
 
 ![Beach racing]({{ site.url }}/assets/gallery/rocket1.jpg)

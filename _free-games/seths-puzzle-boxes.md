@@ -10,6 +10,11 @@ With a tutorial built right into the game, you won't waste any time getting up t
 
 Can you match wits with an android? Let's find out!
 
+- Challenging story mode - Can you beat Seth?
+- Family friendly puzzle mayhem
+- Ideal for children of ALL ages
+- Perfect the levels in practice mode
+
 <div class="gallery" markdown="1">
 
 ![Puzzle 16, Invurcate]({{ site.url }}/assets/gallery/seths1.jpg)

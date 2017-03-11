@@ -6,6 +6,11 @@ Dr.Germ is looking for a new assistant! Are you up to the task?
 
 Experiment with germeology in 4 separate game types to earn science awards. Work your way up the medical ladder and take your place beside Dr.Germ as one of the greatest germeologists of all time!
 
+- 4 Game Modes with Unlimited play time and no more nag screens!
+- Boss coming? Hit 'B' and be back to work in seconds!
+- Compete against players worldwide with the online Hi Scores
+- Instant game download, no waiting
+
 <div class="gallery" markdown="1">
 
 ![Research]({{ site.url }}/assets/gallery/drgerm1.jpg)

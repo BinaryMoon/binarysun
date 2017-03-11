@@ -15,3 +15,13 @@ ExGen uses a series of particle systems to create animated special effects with 
 ![Explode Animation Frames]({{ site.url }}/assets/gallery/exgen3.jpg)
 
 </div>
+
+- ExGen now comes supplied with sample source code which shows how to use the animations in Blitz3D and DarkBASIC Pro
+- Easily create single or sequentially numbered animation images
+- Export the scenes as images or movies (avi files)
+- Create and position multiple particle systems
+- Use your own images to colour and shape the particles
+- Sync Animations with the sound and frame controls
+- Use a timeline to change the start time of the particle animations
+- Add Attractors and Deflectors to manipulate the positions of the individual particles
+- Adjust over 30 different parameters to make literally thousands of different combinations of particle animations
