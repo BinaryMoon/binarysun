@@ -2,6 +2,8 @@
 layout: page
 title: Seths Puzzle Boxes
 ---
+Help Selena rescue her parents by competing against the evil robot 'Seth' - in this fiendish brain bending puzzle game.
+
 Battle your way through 40 mind twisting puzzles in an attempt to rescue Selena's parents from the clutches of the evil android, SETH. Strain your brain against 4 styles of play - story mode, match mode (try to keep up with SETH!), timed mode and practice.
 
 With a tutorial built right into the game, you won't waste any time getting up to speed and going after SETH!

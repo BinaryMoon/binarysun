@@ -2,7 +2,6 @@
 layout: page
 title: Dr Germ
 ---
-
 Dr.Germ is looking for a new assistant! Are you up to the task?
 
 Experiment with germeology in 4 separate game types to earn science awards. Work your way up the medical ladder and take your place beside Dr.Germ as one of the greatest germeologists of all time!

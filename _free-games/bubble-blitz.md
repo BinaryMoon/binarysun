@@ -2,6 +2,8 @@
 layout: page
 title: Bubble Blitz
 ---
+Match the coloured bubbles against the clock in this family friendly puzzle game.
+
 Bubble Blitz is so easy to pick up anyone can play it, guaranteed! Being able to play Bubble Blitz is one thing, are you good enough to get to the top of all the Hi Score tables?
 
 Use the bombs strategically to maximise your score, you'll need all the help you can get!
