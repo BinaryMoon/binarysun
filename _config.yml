@@ -13,6 +13,8 @@ google_analytics: UA-55722-3
 collections:
   games:
     output: true
+  free-games:
+    output: true
 
 # Default properties
 defaults:
