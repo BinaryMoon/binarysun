@@ -426,6 +426,18 @@ body.fullscreen-game {
 
 }
 
+.gallery {
+
+	img {
+
+		margin: 0 auto $grid-line-height auto;
+		border: $border-width solid $canvas-white;
+		display: block;
+
+	}
+
+}
+
 .message {
 
 	border: $border-width solid $canvas-blue;
