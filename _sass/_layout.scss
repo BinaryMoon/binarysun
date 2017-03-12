@@ -441,7 +441,8 @@ body.fullscreen-game {
 .message {
 
 	border: $border-width solid $canvas-blue;
-	background: lighten( $canvas-blue, 25% ) center ( $grid-line-height * 2 ) no-repeat;
+	background: lighten( $canvas-blue, 25% ) center ( $grid-line-height * 2 );
+	background-repeat: no-repeat;
 	padding: ( $grid-line-height * 2 ) ( $grid-gutter * 2 );
 	color: $canvas-blue-dark;
 	font-weight: bold;
