@@ -2,14 +2,97 @@
  * Javascript code for https://www.binarysun.co.uk/
  */
 
-;(function( $ ) {
+
+/**
+ * Local Storage Related Methods.
+ */
+var BS_Storage = (function() {
+
+	'use strict';
+
+	/**
+	 * Make the contents of an array unique so that there are no duplicated
+	 * values.
+	 *
+	 * @param array a An array that may have duplicates.
+	 * @return array
+	 */
+	var unique_array = function( a ) {
+
+		var seen = {};
+
+		return a.filter(
+			function( item ) {
+				return seen.hasOwnProperty( item ) ? false : ( seen[item] = true );
+			}
+		);
+
+	}
+
+
+	/**
+	 * Get a list of items stored in local storage.
+	 *
+	 * @param  string key Key ID for item to return.
+	 * @return array
+	 */
+	var get_array = function( key ) {
+
+		return JSON.parse( localStorage.getItem( key ) );
+
+	}
+
+
+	/**
+	 * Save a list of data into Local Storage.
+	 * Converts the data into a json string since Local Storage only keeps strings.
+	 *
+	 * @param  string key  Key to store the data against.
+	 * @param  array data List of data to store.
+	 */
+	var save_array = function( key, data ) {
+
+		// Make sure the array only contains unique info.
+		data = unique_array( data );
+
+		// Save in Local Storage.
+		localStorage.setItem( key, JSON.stringify( data ) );
+
+	}
+
+
+	/**
+	 * Public methods.
+	 */
+	return {
+		get_array: get_array,
+		save_array: save_array
+	};
+
+}());
+
+
+/**
+ * Do everything with the favorites.
+ */
+var BS_Favorites = (function() {
+
+	'use strict';
+
+	/**
+	 * Local Storage key value for storing favorite games against.
+	 *
+	 * @type {String}
+	 */
+	var key = 'favoriteGames';
+
 
 	/**
 	 * Initialize favorites.
 	 * This code allows a user to store their favorite games. The games get
 	 * stored in localstorage and then displayed on a dedicated page.
 	 */
-	var init_favorites = function() {
+	var init = function() {
 
 		// Favorite game button.
 		$( 'button.fave' ).on(
@@ -97,10 +180,10 @@
 	 */
 	var get_favorites = function() {
 
-		// Load the favorites and parse them so they get returned as an array.
-		return JSON.parse( localStorage.getItem( 'favoriteGames' ) );
+		// Load the favorites.
+		return BS_Storage.get_array( key );
 
-	}
+	};
 
 
 	/**
@@ -125,7 +208,7 @@
 		// Save the favorites.
 		save_favorites( faves );
 
-	}
+	};
 
 
 	/**
@@ -135,16 +218,13 @@
 	 */
 	function save_favorites( faves ) {
 
-		// Make sure the array of games is unique.
-		faves = unique_array( faves );
-
 		// Save the array as a json encoded string.
-		localStorage.setItem( 'favoriteGames', JSON.stringify( faves ) );
+		BS_Storage.save_array( key, faves );
 
 		// Update navigation favorites count.
 		display_favorites_count();
 
-	}
+	};
 
 
 	/**
@@ -171,7 +251,7 @@
 		// Now save the favorites.
 		save_favorites( new_faves );
 
-	}
+	};
 
 
 	/**
@@ -197,35 +277,60 @@
 
 		}
 
+	};
+
+	return {
+		init: init
 	}
 
+}());
+
+/**
+ * Switch the game between standard embedded size, and full screen mode.
+ */
+var BS_Fullscreen = (function() {
+
+	'use strict';
 
 	/**
-	 * Make the contents of an array unique so that there are no duplicated
-	 * values.
-	 *
-	 * @param array a An array that may have duplicates.
-	 * @return array
+	 * Initialise Fullscreen code.
+	 * Adds action to fullscreen button.
 	 */
-	var unique_array = function( a ) {
+	var init = function() {
 
-		var seen = {};
+		// When a user clicks the fullscreen button toggle the body class.
+		// Then use css to change the size of the game.
+		$( 'button.fullscreen' ).on(
+			'click',
+			function( e ) {
 
-		return a.filter(
-			function( item ) {
-				return seen.hasOwnProperty( item ) ? false : ( seen[item] = true );
+				e.preventDefault();
+
+				$( 'body' ).toggleClass( 'fullscreen-game' );
+
 			}
 		);
 
 	}
 
+	return {
+		init: init
+	};
+
+}());
+
+
+/**
+ * Setup filters on games page.
+ * Used: https://www.binarysun.co.uk/games/
+ */
+var BS_CategoryFilters = (function() {
 
 	/**
 	 * Initialise game listing category filters.
 	 * Allows users to filter games according to their desired categories.
-	 * Used: https://www.binarysun.co.uk/games/
 	 */
-	var init_game_categories_filters = function() {
+	var init = function() {
 
 		// Action for category filter.
 		$( '.category-header .filter a' ).on(
@@ -274,37 +379,24 @@
 
 	}
 
+	return {
+		init: init
+	};
 
-	/**
-	 * Switch the game between standard embedded size, and full csreen mode.
-	 */
-	var init_fullscreen_toggle = function() {
-
-		// When a user clicks the fullscreen button toggle the body class.
-		// Then use css to change the size of the game.
-		$( 'button.fullscreen' ).on(
-			'click',
-			function( e ) {
-
-				e.preventDefault();
-
-				$( 'body' ).toggleClass( 'fullscreen-game' );
-
-			}
-		);
-
-	}
+}());
 
 
-	/**
-	 * Initialiaze everything.
-	 */
+/**
+ * Bootstrap.
+ */
+(function( $ ) {
+
 	$( 'document' ).ready(
 		function() {
 
-			init_game_categories_filters();
-			init_favorites();
-			init_fullscreen_toggle();
+			BS_CategoryFilters.init();
+			BS_Favorites.init();
+			BS_Fullscreen.init();
 
 		}
 	);
