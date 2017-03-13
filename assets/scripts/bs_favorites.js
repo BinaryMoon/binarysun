@@ -14,11 +14,54 @@ var BS_Favorites = (function() {
 
 
 	/**
-	 * Initialize favorites.
-	 * This code allows a user to store their favorite games. The games get
-	 * stored in localstorage and then displayed on a dedicated page.
+	 * Display favorited gams on the favorites page.
 	 */
-	var init = function() {
+	var display_favorite_games = function() {
+
+		// Display favorites.
+		// This only happens on the favorites page.
+		// All games are available on the page by default, however they are
+		// hidden. This code shows them if they have been saved.
+		if ( $( 'body' ).hasClass( 'my-favourite-games' ) ) {
+
+			display_favorites();
+
+			// Load saved favorites.
+			var faves = get_favorites();
+
+			// If there are no favorites then display a message saying how to
+			// save them.
+			if ( faves.length <= 0 ) {
+				$( '.message.no-favorites' ).show();
+			}
+
+		}
+
+	}
+
+
+	/**
+	 * Alter favorite button state so that they show whether a game has been favorited or not.
+	 */
+	var set_button_properties = function() {
+
+		// Load saved favorites.
+		var faves = get_favorites();
+
+		// Loop through saved games and set any favorite buttons to display
+		// whether the game is faved or not.
+		for ( var i = 0; i < faves.length; i++ ) {
+			var selector = 'button[data-game-id="' + faves[i] + '"]';
+			$( selector ).addClass( 'favorited' );
+		}
+
+	}
+
+
+	/**
+	 * Setup the favorite buttons so that they will favorite a game on click.
+	 */
+	var setup_buttons = function() {
 
 		// Favorite game button.
 		$( 'button.fave' ).on(
@@ -45,35 +88,6 @@ var BS_Favorites = (function() {
 
 			}
 		);
-
-		// Load saved favorites.
-		var faves = get_favorites();
-
-		// Loop through saved games and set any favorite buttons to display
-		// whether the game is faved or not.
-		for ( var i = 0; i < faves.length; i++ ) {
-			var selector = 'button[data-game-id="' + faves[i] + '"]';
-			$( selector ).addClass( 'favorited' );
-		}
-
-		// Display the number of favorited games in the navigation.
-		display_favorites_count()
-
-		// Display favorites.
-		// This only happens on the favorites page.
-		// All games are available on the page by default, however they are
-		// hidden. This code shows them if they have been saved.
-		if ( $( 'body' ).hasClass( 'my-favourite-games' ) ) {
-
-			display_favorites();
-
-			// If there are no favorites then display a message saying how to
-			// save them.
-			if ( faves.length <= 0 ) {
-				$( '.message.no-favorites' ).show();
-			}
-
-		}
 
 	}
 
@@ -205,6 +219,29 @@ var BS_Favorites = (function() {
 
 	};
 
+
+	/**
+	 * Initialize favorites.
+	 * This code allows a user to store their favorite games. The games get
+	 * stored in localstorage and then displayed on a dedicated page.
+	 */
+	var init = function() {
+
+		setup_buttons();
+
+		set_button_properties();
+
+		// Display the number of favorited games in the navigation.
+		display_favorites_count();
+
+		display_favorite_games();
+
+	}
+
+
+	/**
+	 * Return public methods.
+	 */
 	return {
 		init: init
 	}

@@ -26,6 +26,10 @@ var BS_Fullscreen = (function() {
 
 	}
 
+
+	/**
+	 * Return public methods.
+	 */
 	return {
 		init: init
 	};

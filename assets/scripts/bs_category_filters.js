@@ -20,7 +20,7 @@ var BS_CategoryFilters = (function() {
 				// Set initial properties.
 				var $this = $( this );
 				var category = $this.data( 'category' );
-				var games = $( '.games-list .game' );
+				var $games = $( '.games-list .game' );
 
 				// Remove selected class from all filters, and then add to
 				// selected category.
@@ -29,12 +29,12 @@ var BS_CategoryFilters = (function() {
 
 				// Special case if the 'All' filter is selected.
 				if ( 'all' === category ) {
-					games.show();
+					$games.show();
 					return;
 				}
 
 				// Loop through all games.
-				games.each(
+				$games.each(
 					function() {
 
 						var $this = $( this );
@@ -57,6 +57,10 @@ var BS_CategoryFilters = (function() {
 
 	}
 
+
+	/**
+	 * Return public methods.
+	 */
 	return {
 		init: init
 	};

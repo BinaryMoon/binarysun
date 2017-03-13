@@ -10,6 +10,8 @@
 
 {% include_relative bs_storage.js %}
 
+{% include_relative bs_awards.js %}
+
 /**
  * Modules
  */
@@ -19,6 +21,12 @@
 {% include_relative bs_fullscreen.js %}
 
 {% include_relative bs_category_filters.js %}
+
+{% include_relative bs_games_played.js %}
+
+{% include_relative bs_time_on_site.js %}
+
+{% include_relative bs_visits.js %}
 
 /**
  * Bootstrap.
