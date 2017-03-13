@@ -3,6 +3,7 @@ layout: page
 title: Bubble Bomb
 redirect_from:
   - /online-games/bubble-bomb/
+  - /products/bbomb.htm
 ---
 Match the colours to pop the bubbles in this fast paced puzzle game.
 
