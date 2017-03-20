@@ -12,6 +12,8 @@
 
 {% include_relative bs_awards.js %}
 
+{% include_relative bs_animate.js %}
+
 /**
  * Modules
  */

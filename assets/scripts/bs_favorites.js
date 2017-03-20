@@ -102,12 +102,13 @@ var BS_Favorites = (function() {
 		if ( faves.length > 0 ) {
 
 			// If there's some favorites then update the navigation count.
-			$( 'nav .favorites .count' ).html( faves.length ).show();
+			$( 'nav .favorites .count' ).html( faves.length ).css( 'display', 'inline-block' );
+			$( 'nav .favorites .count' ).animateCss( 'pulse' );
 
 		} else {
 
 			// If there's no favorites then hide the widget.
-			$( 'nav .favorites .count' ).hide();
+			$( 'nav .favorites .count' ).css( 'display', 'none' );
 
 		}
 
