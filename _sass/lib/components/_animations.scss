@@ -25,3 +25,14 @@
 	0% { transform: translateY( -100% ); }
 	100% { transform: translateY( 0 ); }
 }
+
+@include keyframes( pulse ) {
+	0% { transform: scale3d( 1, 1, 1 ); }
+	50% { transform: scale3d( 1.2, 1.2, 1.2 ); }
+	100% { transform: scale3d( 1, 1, 1 ); }
+}
+
+.pulse {
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+}

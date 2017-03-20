@@ -95,6 +95,13 @@ h1, h2, h3, h4, h5, h6 {
 				border-radius: 1rem;
 				text-align: center;
 				display: none;
+				line-height: 1;
+
+				animation-duration: 0.3s;
+				animation-delay: 0;
+				animation-iteration-count: 1;
+
+				//box-shadow: 0 0.2em 0.2em rgba( $canvas-grey-100, 0.1 );
 
 			}
 
@@ -461,4 +468,14 @@ body.fullscreen-game {
 
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
 
+}
+
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.animated.infinite {
+	animation-iteration-count: infinite;
 }
