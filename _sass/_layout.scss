@@ -186,6 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 
 		width: 14%;
 		margin: 0 3% $grid-line-height 3%;
+		position: relative;
 
 		.game-name {
 
@@ -208,6 +209,33 @@ h1, h2, h3, h4, h5, h6 {
 
 			width: 27%;
 
+		}
+
+		button {
+
+			opacity: 0;
+			position: absolute;
+			background: $canvas-white;
+			border-radius: 2rem;
+			top: $grid-line-height / -2;
+			right: $grid-gutter / -4;
+			padding: $grid-line-height / 4;
+
+			&.icon:before {
+
+				margin: 0;
+
+			}
+
+		}
+
+		&:hover {
+
+			button {
+
+				opacity: 1;
+
+			}
 		}
 
 	}
@@ -483,6 +511,12 @@ body.fullscreen-game {
 .adsbygoogle {
 
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
+
+}
+
+.screen-reader-text {
+
+	display: none;
 
 }
 
