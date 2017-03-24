@@ -34,7 +34,7 @@ ExGen uses a series of particle systems to create animated special effects with 
 
 - **name:** free
 - **email:** free@binarysun.co.uk
-- license code:** BE-BE-85-BF-F9-C3
+- **license code:** BE-BE-85-BF-F9-C3
 
 <p class="download">
 <a href="{{ site.url }}/downloads/exgen_setup.exe" class="button">Get ExGen (Windows)</a>
