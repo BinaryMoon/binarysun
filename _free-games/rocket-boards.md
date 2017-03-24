@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Rocket Boards
+redirect_from:
+  - /downloads/demo_rocketboards.exe
 ---
 Can you master the Rocket Board? Find out in this fast paced cartoon racing game. Inspired by Nintendo classics like Super Mario Kart and Diddy Kong Racing; Rocket Boards brings the cartoon racing formula to the pc.
 

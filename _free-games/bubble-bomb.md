@@ -4,6 +4,7 @@ title: Bubble Bomb
 redirect_from:
   - /online-games/bubble-bomb/
   - /products/bbomb.htm
+  - /downloads/dmo_bubblebomb.exe
 ---
 Match the colours to pop the bubbles in this fast paced puzzle game.
 
