@@ -28,5 +28,5 @@ The free version gives you the entire first grandprix so that you can build your
 - Install and play in minutes, the basic version is only 2.5 megabytes and the full version is a measly 3.4 meg.
 
 <p class="download">
-<a href="{{ site.url }}/downloads/full_rocketboards.exe" class="button">Get Rocket Boards (Windows)</a>
+<a href="https://github.com/BinaryMoon/binarysun/releases/download/v1.0/full_rocketboards.exe" class="button">Get Rocket Boards (Windows)</a>
 </p>

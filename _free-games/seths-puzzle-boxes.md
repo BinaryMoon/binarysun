@@ -25,5 +25,5 @@ Can you match wits with an android? Let's find out!
 - Perfect the levels in practice mode
 
 <p class="download">
-<a href="{{ site.url }}/downloads/full_seths.exe" class="button">Get Seths Puzzle Boxes (Windows)</a>
+<a href="https://github.com/BinaryMoon/binarysun/releases/download/v1.0/full_seths.exe" class="button">Get Seths Puzzle Boxes (Windows)</a>
 </p>

@@ -25,5 +25,5 @@ Use the bombs strategically to maximise your score, you'll need all the help you
 - 3 Hi Score tables - are you the best?
 
 <p class="download">
-<a href="{{ site.url }}/downloads/full_bubbleblitz.exe" class="button">Get Bubble Blitz (Windows)</a>
+<a href="https://github.com/BinaryMoon/binarysun/releases/download/v1.0/full_bubbleblitz.exe" class="button">Get Bubble Blitz (Windows)</a>
 </p>

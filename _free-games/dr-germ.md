@@ -21,5 +21,5 @@ Experiment with germeology in 4 separate game types to earn science awards. Work
 - Instant game download, no waiting
 
 <p class="download">
-<a href="{{ site.url }}/downloads/full_drgerm.exe" class="button">Get Dr Germ (Windows)</a>
+<a href="https://github.com/BinaryMoon/binarysun/releases/download/v1.0/full_drgerm.exe" class="button">Get Dr Germ (Windows)</a>
 </p>

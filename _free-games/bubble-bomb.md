@@ -23,5 +23,5 @@ A highly addictive puzzle game made in the spirit of Bubblet. Bubble Bomb adds t
 - Family friendly puzzle mahem
 
 <p class="download">
-<a href="{{ site.url }}/downloads/full_bubblebomb.exe" class="button">Get Bubble Bomb (Windows)</a>
+<a href="https://github.com/BinaryMoon/binarysun/releases/download/v1.0/full_bubblebomb.exe" class="button">Get Bubble Bomb (Windows)</a>
 </p>
