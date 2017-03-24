@@ -24,3 +24,7 @@ The free version gives you the entire first grandprix so that you can build your
 - Race across 16 different tracks in 4 varied locations
 - Listen to a varied musical score, even including the ability to add your own music into the game.
 - Install and play in minutes, the basic version is only 2.5 megabytes and the full version is a measly 3.4 meg.
+
+<p class="download">
+<a href="{{ site.url }}/downloads/full_rocketboards.exe" class="button">Get Rocket Boards (Windows)</a>
+</p>

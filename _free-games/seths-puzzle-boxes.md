@@ -23,3 +23,7 @@ Can you match wits with an android? Let's find out!
 - Family friendly puzzle mayhem
 - Ideal for children of ALL ages
 - Perfect the levels in practice mode
+
+<p class="download">
+<a href="{{ site.url }}/downloads/full_seths.exe" class="button">Get Seths Puzzle Boxes (Windows)</a>
+</p>

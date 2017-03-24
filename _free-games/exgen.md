@@ -29,3 +29,17 @@ ExGen uses a series of particle systems to create animated special effects with 
 - Use a timeline to change the start time of the particle animations
 - Add Attractors and Deflectors to manipulate the positions of the individual particles
 - Adjust over 30 different parameters to make literally thousands of different combinations of particle animations
+
+**ExGen is now free**. To register your copy of ExGen and make it a full version you can use the following information:
+
+- **name:** free
+- **email:** free@binarysun.co.uk
+- license code:** BE-BE-85-BF-F9-C3
+
+<p class="download">
+<a href="{{ site.url }}/downloads/exgen_setup.exe" class="button">Get ExGen (Windows)</a>
+</p>
+
+<p class="download">
+<a href="{{ site.url }}/downloads/exgen_code.zip" class="button">Get ExGen Demo Code</a>
+</p>

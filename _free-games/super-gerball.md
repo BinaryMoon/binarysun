@@ -23,5 +23,5 @@ There is also a time limit to contend with - Gerry must complete all the levels 
 - 3 unique endings - complete the game in easy, medium or hard mode and you will be rewarded with an entertaining end sequence
 
 <p class="download">
-	<a href="http://www.supergerball.com/" class="button">Get Super Gerball</a>
+<a href="http://www.supergerball.com/" class="button">Get Super Gerball</a>
 </p>

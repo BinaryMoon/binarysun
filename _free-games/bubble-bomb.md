@@ -20,3 +20,7 @@ A highly addictive puzzle game made in the spirit of Bubblet. Bubble Bomb adds t
 - Limitless play time
 - New Bomb element increases the gameplay possibilities
 - Family friendly puzzle mahem
+
+<p class="download">
+<a href="{{ site.url }}/downloads/full_bubblebomb.exe" class="button">Get Bubble Bomb (Windows)</a>
+</p>

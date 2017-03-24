@@ -19,3 +19,7 @@ Experiment with germeology in 4 separate game types to earn science awards. Work
 - Boss coming? Hit 'B' and be back to work in seconds!
 - Compete against players worldwide with the online Hi Scores
 - Instant game download, no waiting
+
+<p class="download">
+<a href="{{ site.url }}/downloads/full_drgerm.exe" class="button">Get Dr Germ (Windows)</a>
+</p>

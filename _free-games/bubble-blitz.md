@@ -23,3 +23,7 @@ Use the bombs strategically to maximise your score, you'll need all the help you
 - Family friendly puzzle mahem
 - Ideal for children of ALL ages
 - 3 Hi Score tables - are you the best?
+
+<p class="download">
+<a href="{{ site.url }}/downloads/full_bubbleblitz.exe" class="button">Get Bubble Blitz (Windows)</a>
+</p>
