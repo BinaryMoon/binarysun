@@ -40,6 +40,8 @@ ExGen uses a series of particle systems to create animated special effects with 
 <a href="{{ site.url }}/downloads/exgen_setup.exe" class="button">Get ExGen (Windows)</a>
 </p>
 
+ExGen comes with a demo code bundle that includes examples for using ExGen output with the Blitz3D programming language.
+
 <p class="download">
 <a href="{{ site.url }}/downloads/exgen_code.zip" class="button">Get ExGen Demo Code</a>
 </p>
