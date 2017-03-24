@@ -37,6 +37,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - /downloads
 include:
   - _pages
