@@ -10,11 +10,6 @@ Bubble Blitz is so easy to pick up anyone can play it, guaranteed! Being able to
 
 Use the bombs strategically to maximise your score, you'll need all the help you can get!
 
-- Limitless never ending gameplay
-- Family friendly puzzle mahem
-- Ideal for children of ALL ages
-- 3 Hi Score tables - are you the best?
-
 <div class="gallery" markdown="1">
 
 ![Mid game, popping bubbles]({{ site.url }}/assets/gallery/bblitz1.gif)
@@ -23,3 +18,8 @@ Use the bombs strategically to maximise your score, you'll need all the help you
 ![Game over]({{ site.url }}/assets/gallery/bblitz4.gif)
 
 </div>
+
+- Limitless never ending gameplay
+- Family friendly puzzle mahem
+- Ideal for children of ALL ages
+- 3 Hi Score tables - are you the best?
