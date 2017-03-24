@@ -464,6 +464,22 @@ body.fullscreen-game {
 
 }
 
+.post-content {
+
+	.download {
+
+		text-align: center;
+
+		.button {
+
+			@include modular-scale( epsilon );
+
+		}
+
+	}
+
+}
+
 .adsbygoogle {
 
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
