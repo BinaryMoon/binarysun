@@ -529,3 +529,31 @@ body.fullscreen-game {
 .animated.infinite {
 	animation-iteration-count: infinite;
 }
+
+.notification_container {
+
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 0 ( $grid-gutter / 4 );
+	width: $grid-gutter * 6;
+	max-width: 100%;
+
+	.notification {
+
+		background: $canvas-yellow;
+		color: $canvas-grey-100;
+		@include modular-scale( eta );
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 4 );
+		margin-bottom: $grid-line-height / 2;
+
+		.header {
+
+			font-weight: bold;
+			display: block;
+
+		}
+
+	}
+
+}

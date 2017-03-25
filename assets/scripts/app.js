@@ -22,6 +22,8 @@
 
 {% include_relative bs_fullscreen.js %}
 
+{% include_relative bs_notification.js %}
+
 {% include_relative bs_category_filters.js %}
 
 {% include_relative bs_games_played.js %}
@@ -41,6 +43,7 @@
 			BS_CategoryFilters.init();
 			BS_Favorites.init();
 			BS_Fullscreen.init();
+			BS_Notification.init();
 
 		}
 	);

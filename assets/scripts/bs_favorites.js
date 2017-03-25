@@ -146,6 +146,12 @@ var BS_Favorites = (function() {
 		// Add the new game to the array.
 		faves.push( id );
 
+		BS_Notification.create(
+			'Favorite Saved',
+			'',
+			'fave'
+		);
+
 		// Save the favorites.
 		save_favorites( faves );
 
@@ -188,6 +194,12 @@ var BS_Favorites = (function() {
 				new_faves.push( faves[i] );
 			}
 		}
+
+		BS_Notification.create(
+			'Favorite Removed',
+			'',
+			'fave'
+		);
 
 		// Now save the favorites.
 		save_favorites( new_faves );
