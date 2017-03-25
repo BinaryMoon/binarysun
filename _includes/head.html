@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}?dc={{ site.time | date: '%y%m%d%k%M' }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
+	<meta name="theme-color" content="#fbe500">
+
 	{% if jekyll.environment == 'production' and site.google_analytics %}
 	{% include google-analytics.html %}
 	{% endif %}
