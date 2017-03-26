@@ -3,7 +3,7 @@
 
 	{% include head.html %}
 
-	<body class="{{ page.title | slugify }}">
+	<body class="{{ page.title | slugify }} {{ layout.body_class | slugify }}">
 
 		{% include header.html %}
 
