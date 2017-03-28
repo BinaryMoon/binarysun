@@ -14,6 +14,8 @@
 
 {% include_relative bs_animate.js %}
 
+{% include_relative bs_cookie.js %}
+
 /**
  * Modules
  */
@@ -31,6 +33,8 @@
 {% include_relative bs_time_on_site.js %}
 
 {% include_relative bs_visits.js %}
+
+{% include_relative bs_cookie_law.js %}
 
 /**
  * Bootstrap.
