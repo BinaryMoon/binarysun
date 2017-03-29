@@ -205,6 +205,64 @@ h1, h2, h3, h4, h5, h6 {
 
 		}
 
+		.game-icon-wrapper {
+
+			position: relative;
+			display: block;
+
+			&:before,
+			&:after {
+
+				@include transition;
+
+			}
+
+			&:after {
+
+				content: '';
+				background: rgba( $canvas-white, 0.5 );
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				opacity: 0;
+				border-radius: 15%;
+
+			}
+
+			&:before {
+
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -12px;
+				margin-left: -12px;
+				width: 24px;
+				height: 24px;
+				background: url( ../images/icons.png ) no-repeat;
+				background-position: 0 ( 24px * -8 );
+				background-size: 24px;
+				z-index: 100;
+				opacity:0;
+
+			}
+
+			&:hover {
+
+				&:before,
+				&:after {
+
+					opacity: 1;
+
+				}
+
+			}
+
+		}
+
 		@include for-phone {
 
 			width: 27%;
