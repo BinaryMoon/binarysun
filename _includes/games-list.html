@@ -3,7 +3,9 @@
 	{% for game in gamelist limit: include.limit %}
 	<div class="game" data-categories="{{ game.genres }}" data-game-id="{{ game.game_id }}">
 		<a href="{{ game.url | relative_url }}" class="game-url">
-			<img src="https://az680633.vo.msecnd.net/thumbnail/{{ game.game_id }}/250/{{ game.game_id }}.png" class="game-icon" />
+			<div class="game-icon-wrapper">
+				<img src="https://az680633.vo.msecnd.net/thumbnail/{{ game.game_id }}/250/{{ game.game_id }}.png" class="game-icon" />				
+			</div>
 			<span class="game-name">{{ game.title | escape }}</span>
 		</a>
 		<button class="fave icon" data-game-id="{{ game.game_id }}"><span class="screen-reader-text">Favourite</span></button>
