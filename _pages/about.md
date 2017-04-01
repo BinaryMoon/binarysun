@@ -7,7 +7,7 @@ permalink: /about/
 
 ## History
 
-Binary Sun was originally setup in 2004 as a shareware games site to sell the games I made as a hobby. However it is really hard to compete in the shareware games market - so I got into web design. However I continued making games for fun.
+Binary Sun was originally setup in 2004 as a shareware games site to sell the games I made as a hobby. However it is really hard to compete in the shareware games market - so I got into web design - and continued making games for fun. You can see the shareware games I made on the [Free Games]({% link _pages/free-games.md %}) page.
 
 In late 2004 I got a job at Miniclip.com - at the time a company that worked exclusively in online games. I worked there for 11 years working my way up the corporate ladder until I became the Director of Web Development. In 2015 I left Miniclip to forge my own path. I now make a living selling WordPress themes on [Pro Theme Design](https://prothemedesign.com).
 
