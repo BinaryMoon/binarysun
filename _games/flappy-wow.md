@@ -3,7 +3,7 @@ title: "Flappy WOW"
 game_id: 20035
 game_width: 320
 game_height: 480
-rank: 8500
+rank: 0
 date: 2014-07-16T12:19:58.409Z
 genres: arcade
 ---

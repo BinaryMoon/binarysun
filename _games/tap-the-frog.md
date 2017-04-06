@@ -3,7 +3,7 @@ title: "Tap the Frog"
 game_id: 40187
 game_width: 600
 game_height: 375
-rank: 17200
+rank: 16900
 date: 2015-10-06T22:15:28.891Z
 genres: puzzles
 ---

@@ -3,7 +3,7 @@ title: "Happy Kittens Puzzle"
 game_id: 40340
 game_width: 600
 game_height: 800
-rank: 0
+rank: 16900
 date: 2017-03-28T12:29:00.336Z
 genres: puzzles
 ---

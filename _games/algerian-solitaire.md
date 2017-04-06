@@ -3,7 +3,7 @@ title: "Algerian Solitaire"
 game_id: 40291
 game_width: 960
 game_height: 640
-rank: 0
+rank: 16700
 date: 2016-12-06T09:46:30.635Z
 genres: casino
 ---

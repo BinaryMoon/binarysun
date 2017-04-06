@@ -3,7 +3,7 @@ title: "Grand Prix Hero"
 game_id: 40334
 game_width: 720
 game_height: 405
-rank: 0
+rank: 17000
 date: 2017-03-28T12:15:51.653Z
 genres: arcade sports
 ---
