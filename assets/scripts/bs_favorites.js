@@ -1,12 +1,12 @@
 /**
- * Do everything with the favorites.
+ * Do everything with the favourites.
  */
-var BS_Favorites = (function() {
+var BS_Favourites = (function() {
 
 	'use strict';
 
 	/**
-	 * Local Storage key value for storing favorite games against.
+	 * Local Storage key value for storing favourite games against.
 	 *
 	 * @type {String}
 	 */
@@ -14,56 +14,74 @@ var BS_Favorites = (function() {
 
 
 	/**
-	 * Display favorited gams on the favorites page.
+	 * CSS selector for the favourite games list.
+	 *
+	 * @type {String}
 	 */
-	var display_favorite_games = function() {
+	var fave_games_selector = '.my-favourite-games .all-games .games-list .game';
 
-		// Display favorites.
-		// This only happens on the favorites page.
-		// All games are available on the page by default, however they are
-		// hidden. This code shows them if they have been saved.
-		if ( $( 'body' ).hasClass( 'my-favourite-games' ) ) {
 
-			display_favorites();
+	/**
+	 * Display favourited gams on the favourites page.
+	 */
+	var display_favourite_games = function() {
 
-			// Load saved favorites.
-			var faves = get_favorites();
+		// Only display on "my favourites" page.
+		if ( ! is_my_favourites_page() ) {
+			return;
+		}
 
-			// If there are no favorites then display a message saying how to
-			// save them.
-			if ( faves.length <= 0 ) {
-				$( '.message.no-favorites' ).show();
-			}
+		display_favourites();
 
+		// Load saved favourites.
+		var faves = get_favourites();
+
+		// If there are no favourites then display a message saying how to
+		// save them.
+		if ( faves.length <= 0 ) {
+			$( '.message.no-favorites' ).show();
 		}
 
 	}
 
 
 	/**
-	 * Alter favorite button state so that they show whether a game has been favorited or not.
+	 * Is the current page the 'My Favourite Games' page?
+	 *
+	 * @type boolean
+	 */
+	var is_my_favourites_page = function() {
+
+		return $( 'body' ).hasClass( 'my-favourite-games' );
+
+	}
+
+
+	/**
+	 * Alter favourite button state so that they show whether a game has been favourited or not.
 	 */
 	var set_button_properties = function() {
 
-		// Load saved favorites.
-		var faves = get_favorites();
+		// Load saved favourites.
+		var faves = get_favourites();
 
-		// Loop through saved games and set any favorite buttons to display
+		// Loop through saved games and set any favourite buttons to display
 		// whether the game is faved or not.
 		for ( var i = 0; i < faves.length; i++ ) {
-			var selector = 'button[data-game-id="' + faves[i] + '"]';
-			$( selector ).addClass( 'favorited' );
+
+			set_favourite_game_status( faves[i], true );
+
 		}
 
 	}
 
 
 	/**
-	 * Setup the favorite buttons so that they will favorite a game on click.
+	 * Setup the favourite buttons so that they will favourite a game on click.
 	 */
 	var setup_buttons = function() {
 
-		// Favorite game button.
+		// Favourite game button.
 		$( 'button.fave' ).on(
 			'click',
 			function() {
@@ -71,18 +89,16 @@ var BS_Favorites = (function() {
 				var $this = $( this );
 				var game_id = $this.data( 'game-id' );
 
+				// Check games current saved status.
 				if ( $this.hasClass( 'favorited' ) ) {
 
-					// Remove favorite.
-					$this.removeClass( 'favorited' );
-					delete_favorite( game_id );
-
+					// Remove favourite.
+					set_favourite_game_status( game_id, false );
 
 				} else {
 
-					// Add favorite.
-					$this.addClass( 'favorited' );
-					save_favorite( game_id );
+					// Add favourite.
+					set_favourite_game_status( game_id, true );
 
 				}
 
@@ -93,21 +109,53 @@ var BS_Favorites = (function() {
 
 
 	/**
+	 * Set the status of the game button.
+	 *
+	 * This allows us to consistently set whether the game has been favourited or
+	 * not.
+	 *
+	 * @param  int 	   game_id The game id
+	 * @param  boolean status  true for game is favourited, false for not
+	 */
+	var set_favourite_game_status = function( game_id, status ) {
+
+		var selector = '.game[data-game-id="' + game_id + '"] button';
+		var $game = $( selector );
+
+		// Check games current saved status.
+		if ( status ) {
+
+			// Add favourite.
+			$game.addClass( 'favorited' );
+			save_favourite( game_id );
+
+		} else {
+
+			// Delete favourite.
+			$game.removeClass( 'favorited' );
+			delete_favourite( game_id );
+
+		}
+
+	}
+
+
+	/**
 	 * Display a number in the navigation showing how many games you have favourited.
 	 */
-	var display_favorites_count = function() {
+	var display_favourites_count = function() {
 
-		var faves = get_favorites();
+		var faves = get_favourites();
 
 		if ( faves.length > 0 ) {
 
-			// If there's some favorites then update the navigation count.
+			// If there's some favourites then update the navigation count.
 			$( 'nav .favorites .count' ).html( faves.length ).css( 'display', 'inline-block' );
 			$( 'nav .favorites .count' ).animateCss( 'pulse' );
 
 		} else {
 
-			// If there's no favorites then hide the widget.
+			// If there's no favourites then hide the widget.
 			$( 'nav .favorites .count' ).css( 'display', 'none' );
 
 		}
@@ -115,36 +163,54 @@ var BS_Favorites = (function() {
 	}
 
 	/**
-	 * Get a list of favorite game ids.
+	 * Get a list of favourite game ids.
 	 *
 	 * @return array
 	 */
-	var get_favorites = function() {
+	var get_favourites = function() {
 
-		// Load the favorites.
+		// Load the favourites.
 		return BS_Storage.get_array( key );
 
 	};
 
 
 	/**
-	 * Save a favorite game to local storage.
+	 * Save favourite games as an array.
+	 *
+	 * @param  array faves array of favourite game ids.
+	 */
+	function save_favourites( faves ) {
+
+		// Save the array as a json encoded string.
+		BS_Storage.save_array( key, faves );
+
+		// Update navigation favourites count.
+		display_favourites_count();
+
+		display_favourite_games();
+
+	};
+
+
+	/**
+	 * Save a favourite game to local storage.
 	 * Uses the game id
 	 *
-	 * @param  int id The ID of the game to save.
+	 * @param  int game_id The ID of the game to save.
 	 */
-	var save_favorite = function( id ) {
+	var save_favourite = function( game_id ) {
 
-		// Get current favorites.
-		var faves = get_favorites();
+		// Get current favourites.
+		var faves = get_favourites();
 
-		// If there's no favorites then initialize the array.
+		// If there's no favourites then initialize the array.
 		if ( ! faves ) {
 			faves = [];
 		}
 
 		// Add the new game to the array.
-		faves.push( id );
+		faves.push( game_id );
 
 		BS_Notification.create(
 			'Favorite Saved',
@@ -152,47 +218,33 @@ var BS_Favorites = (function() {
 			'fave'
 		);
 
-		// Save the favorites.
-		save_favorites( faves );
+		// Save the favourites.
+		save_favourites( faves );
 
 	};
 
 
 	/**
-	 * Save favorite games as an array.
+	 * Delete favourite game with the specified id.
 	 *
-	 * @param  array faves array of favorite game ids.
+	 * @param  int game_id game id to delete.
 	 */
-	function save_favorites( faves ) {
+	var delete_favourite = function( game_id ) {
 
-		// Save the array as a json encoded string.
-		BS_Storage.save_array( key, faves );
+		// Load the existing favourites.
+		var faves = get_favourites();
 
-		// Update navigation favorites count.
-		display_favorites_count();
-
-	};
-
-
-	/**
-	 * Delete favorite game with the specified id.
-	 *
-	 * @param  int id game id to delete.
-	 */
-	var delete_favorite = function( id ) {
-
-		// Load the existing favorites.
-		var faves = get_favorites();
-
-		// New array to store the modified favorites in.
+		// New array to store the modified favourites in.
 		var new_faves = [];
 
-		// Loop through the saves favorites and add them to the new array.
-		// If the favorite is the one we want to delete then skip it.
+		// Loop through the saves favourites and add them to the new array.
+		// If the favourite is the one we want to delete then skip it.
 		for ( var i = 0; i < faves.length; i++ ) {
-			if ( faves[i] != id ) {
+
+			if ( faves[i] != game_id ) {
 				new_faves.push( faves[i] );
 			}
+
 		}
 
 		BS_Notification.create(
@@ -201,8 +253,8 @@ var BS_Favorites = (function() {
 			'fave'
 		);
 
-		// Now save the favorites.
-		save_favorites( new_faves );
+		// Now save the favourites.
+		save_favourites( new_faves );
 
 	};
 
@@ -211,21 +263,32 @@ var BS_Favorites = (function() {
 	 * Display favourite games.
 	 * Will do nothing if executed on the wrong page.
 	 * Used: https://www.binarysun.co.uk/favourites/
+	 *
+	 * All games are available on the page by default, however they are hidden.
+	 * This function shows them if they have been saved.
 	 */
-	var display_favorites = function() {
+	var display_favourites = function() {
 
-		// Load the favorites.
-		var faves = get_favorites();
+		// This only happens on the favourites page.
+		if ( ! is_my_favourites_page() ) {
+			return;
+		}
 
-		// If there's no favorites return. There's nothing else to do.
+		// Load the favourites.
+		var faves = get_favourites();
+
+		// If there's no favourites return. There's nothing else to do.
 		if ( ! faves ) {
 			return;
 		}
 
-		// Loop through the favorites and set them as visible.
+		// Hide all games to make sure we're only showing the saved ones.
+		$( fave_games_selector ).hide();
+
+		// Loop through the favourites and set them as visible.
 		for ( var i = 0; i < faves.length; i++ ) {
 
-			var selector = '.my-favourite-games .all-games .games-list .game[data-game-id="' + faves[i] + '"]';
+			var selector = fave_games_selector + '[data-game-id="' + faves[i] + '"]';
 			$( selector ).show();
 
 		}
@@ -234,8 +297,8 @@ var BS_Favorites = (function() {
 
 
 	/**
-	 * Initialize favorites.
-	 * This code allows a user to store their favorite games. The games get
+	 * Initialize favourites.
+	 * This code allows a user to store their favourite games. The games get
 	 * stored in localstorage and then displayed on a dedicated page.
 	 */
 	var init = function() {
@@ -244,10 +307,10 @@ var BS_Favorites = (function() {
 
 		set_button_properties();
 
-		// Display the number of favorited games in the navigation.
-		display_favorites_count();
+		// Display the number of favourited games in the navigation.
+		display_favourites_count();
 
-		display_favorite_games();
+		display_favourite_games();
 
 	}
 
