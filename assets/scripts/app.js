@@ -45,7 +45,7 @@
 		function() {
 
 			BS_CategoryFilters.init();
-			BS_Favorites.init();
+			BS_Favourites.init();
 			BS_Fullscreen.init();
 			BS_Notification.init();
 
