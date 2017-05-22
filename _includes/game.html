@@ -11,6 +11,11 @@
 }
 </style>
 
+{% assign game_url = include.game.game_url %}
+{% if game_url == null %}
+{% capture game_url %}https://games.gamepix.com/play/{{ include.game.game_id }}?sid=80185"{% endcapture %}
+{% endif %}
+
 <div class="game-wrapper">
 
 	<div class="game-container">
@@ -21,7 +26,7 @@
 
 		<div class="game-container-inner">
 			<iframe
-				src="https://games.gamepix.com/play/{{ include.game.game_id }}?sid=80185"
+				src="{{ game_url }}"
 				frameborder="0"
 				scrolling="no"></iframe>
 		</div>
