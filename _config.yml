@@ -21,12 +21,20 @@ collections:
     output: true
   free-games:
     output: true
+  io-games:
+    output: true
 
 # Default properties
 defaults:
   - scope:
       type: games
     values:
+      layout: game
+  - scope:
+      type: io-games
+    values:
+      game_width: 1000
+      game_height: 600
       layout: game
 
 # Build settings
