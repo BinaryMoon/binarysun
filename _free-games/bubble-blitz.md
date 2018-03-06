@@ -3,6 +3,8 @@ layout: page
 title: Bubble Blitz
 redirect_from:
   - /online-games/bubble-blitz/
+  - /downloads/demo_bubbleblitz.exe
+  - /downloads/count.php?f=demo_bubbleblitz.e<br/>xe
 ---
 Match the coloured bubbles against the clock in this family friendly puzzle game.
 

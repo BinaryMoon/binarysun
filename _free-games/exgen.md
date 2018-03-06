@@ -5,6 +5,7 @@ permalink: /products/exgen/
 redirect_from:
   - /products/exgen.htm
   - /free-games/exgen/
+  - /downloads/exgen_setup.exe
 ---
 Explosions and Special Effects. They look good but making animated effects for games isn't as easy as it could be. ExGen is designed to fulfill all the special effects art requirements for the average video game.
 

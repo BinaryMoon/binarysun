@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Seths Puzzle Boxes
+redirect_from:
+  - /downloads/count.php?f=demo_seths.exe
+  - /downloads/demo_seths.exe
 ---
 Help Selena rescue her parents by competing against the evil robot 'Seth' - in this fiendish brain bending puzzle game.
 

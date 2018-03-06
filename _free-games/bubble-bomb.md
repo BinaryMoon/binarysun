@@ -5,6 +5,9 @@ redirect_from:
   - /online-games/bubble-bomb/
   - /products/bbomb.htm
   - /downloads/dmo_bubblebomb.exe
+  - /downloads/demo_bubblebomb.exe
+  - /downloads/count.php?f=demo_bubblebomb.ex<br/>e
+  - /downloads/count.php?f=demo_bubblebomb.exe
 ---
 Match the colours to pop the bubbles in this fast paced puzzle game.
 

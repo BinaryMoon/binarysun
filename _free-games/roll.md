@@ -3,6 +3,7 @@ layout: page
 title: Roll
 redirect_from:
   - /online-games/roll/
+  - /downloads/refer.php?a=game-roll&t=
 ---
 Roll is a flash game cratd for a JayIsGames competition. It's a physics based game that challenges you to remove all of the red balls from the play field.
 
