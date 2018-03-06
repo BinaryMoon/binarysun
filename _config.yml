@@ -6,6 +6,7 @@ description: >
 baseurl: ""
 url: ""
 twitter_username: binarymoon
+github: [metadata]
 permalink: /blog/:year/:title/
 google_analytics: UA-55722-3
 
@@ -39,12 +40,17 @@ defaults:
 
 # Build settings
 markdown: kramdown
+
 gems:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - LICENSE
+
 include:
   - _pages
